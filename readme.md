@@ -1,0 +1,4 @@
+* [log4net introduction manual](http://logging.apache.org/log4net/release/manual/introduction.html)
+* [http://stackoverflow.com/questions/1713043/what-is-the-best-pattern-for-using-same-log4net-logger-across-many-assemblies-in](http://stackoverflow.com/questions/1713043/what-is-the-best-pattern-for-using-same-log4net-logger-across-many-assemblies-in) 
+  * A logger can have many appenders. And many loggers can also write to the SAME appender. So, you could configure loggers "A", "B", and "C" to all log to file "X".
+  * Most comon way is to create a static logger instance per class, named for that class. This gives you a very high level of granularity for controlling your logging. Then you can configure certain loggers to write to one place.
